@@ -1,0 +1,46 @@
+module:
+  id: "02-ProjectManagement-GitHub"
+  title: "Manage your work with GitHub Projects"
+  source_url: "https://learn.microsoft.com/en-us/training/modules/manage-work-github-projects/"
+  version: "1.0.0" # Versioning your learning schema
+  status: "in_progress"
+  pbl_theme: "Self-Automating Student"
+
+tracking:
+  total_units: 8
+  units_completed: 0
+  last_updated: "2026-03-26"
+
+curriculum_map:
+  - unit: 1
+    title: "Introduction"
+    status: "pending"
+  - unit: 2
+    title: "What are GitHub Projects?"
+    status: "pending"
+  - unit: 3
+    title: "Exercise - Create a project"
+    status: "pending"
+  - unit: 4
+    title: "How to manage a project"
+    status: "pending"
+  - unit: 5
+    title: "Exercise - Customise a project"
+    status: "pending"
+  - unit: 6
+    title: "Project workflows and automation"
+    status: "pending"
+  - unit: 7
+    title: "Exercise - Project workflows and automation"
+    status: "pending"
+  - unit: 8
+    title: "Summary and knowledge check"
+    status: "pending"
+
+taxonomy:
+  tags:
+    - "GitHub"
+    - "ProjectManagement"
+    - "DevSecOps"
+    - "EverythingAsCode"
+  domain: "Platform Engineering"
