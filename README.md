@@ -3,7 +3,8 @@
 This repository serves as a comprehensive technical portfolio and "Standard Operating Procedure" (SOP) library. It documents my personal takes on the different learning paths on Windows learn while mastering enterprise-level Windows infrastructure.
 
 The follwoing paths are covered:
-  - [Active Directory Domain Services](https://learn.microsoft.com/en-gb/training/paths/active-directory-domain-services/)
+  - [01 Active Directory Domain Services](https://learn.microsoft.com/en-gb/training/paths/active-directory-domain-services/)
+  - [02 GitHub Foundations Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/github-foundations/?source=learn)
   - [Windows Server Network Infrastructure](https://learn.microsoft.com/en-gb/training/paths/windows-server-network-infrastructure/)
   - [Deploy and manage identity infrastructure](https://learn.microsoft.com/en-gb/training/paths/deploy-manage-identity-infrastructure/)
   - [Administer Active Directory Domain Services (AZ-1008)](https://learn.microsoft.com/en-us/training/paths/administer-active-directory-domain-services/)
