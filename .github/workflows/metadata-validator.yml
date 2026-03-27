@@ -1,0 +1,40 @@
+# The 'name' is what appears in the 'Actions' tab of your GitHub repository.
+# It should be descriptive enough to distinguish it from other pipelines.
+name: "CI: Metadata Validation"
+
+# 'on' defines the triggers for this workflow (The Event Layer).
+on:
+  # Triggers when code is merged or pushed directly to the main branch.
+  push:
+    branches: ["main"]
+  # Triggers when a Pull Request is opened or updated against the main branch.
+  # This acts as the 'Quality Gate' before code is allowed into the trunk.
+  pull_request:
+    branches: ["main"]
+
+# 'jobs' are the execution units. By default, multiple jobs run in parallel.
+jobs:
+  lint-yaml:
+    name: "Lint Metadata YAML"
+    # 'runs-on' specifies the virtual machine environment (The Runner).
+    # 'ubuntu-latest' is the standard, cost-effective choice for Linux-based tasks.
+    runs-on: ubuntu-latest
+
+    # 'steps' are the sequential tasks executed within the job.
+    steps:
+      # Step 1: Clone the repository onto the runner's file system.
+      # Without this, the runner has no files to look at.
+      - name: "Checkout Code"
+        uses: actions/checkout@v4
+
+      # Step 2: Execute the linter.
+      # We use a community-standard action (ibiqlik/action-yamllint) to 
+      # check for syntax errors, trailing spaces, and indentation.
+      - name: "Validate YAML Syntax"
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          # 'file_or_dir' limits the scope to your learning modules.
+          # This prevents the linter from failing on unrelated third-party YAML.
+          file_or_dir: "02-GitHub-Foundations/**/*.yaml"
+          # 'config_file' points to your custom rules (e.g. line length limits).
+          config_file: ".github/linters/.yamllint.yml"

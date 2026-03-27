@@ -1,0 +1,19 @@
+# Inherit the "default" rule set from yamllint as a baseline
+extends: default
+
+rules:
+  # Disables the requirement for every file to start with '---'
+  # This makes small metadata files cleaner to read.
+  document-start: disable
+
+  # Disables line length limits
+  # Useful if you have long URLs or descriptions in your metadata.
+  line-length: disable
+
+  # Ensures consistent indentation (standard is 2 spaces)
+  indentation:
+    spaces: 2
+    indent-sequences: true
+
+  # Prevents trailing spaces at the end of lines (cleanliness)
+  trailing-spaces: enable
